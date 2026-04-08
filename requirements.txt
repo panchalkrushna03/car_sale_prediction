@@ -1,0 +1,11 @@
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+scipy
+statsmodels
+pandas-datareader
+pandas-datareader
+mlflow
+cookiecutter

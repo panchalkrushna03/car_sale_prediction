@@ -1,4 +1,4 @@
-.PHONY: clean data lint requirements sync_data_to_s3 sync_data_from_s3
+.PHONY: clean data lint requirements sync_data_to_s3 sync_data_from_s3 train predict
 
 #################################################################################
 # GLOBALS                                                                       #
@@ -27,7 +27,15 @@ requirements: test_environment
 
 ## Make Dataset
 data: requirements
-	$(PYTHON_INTERPRETER) src/data/make_dataset.py data/raw data/processed
+	$(PYTHON_INTERPRETER) src/data/make_dataset.py data/external/bmw_global_sales_2018_2025.csv data/processed
+
+## Train Model
+train: data
+	$(PYTHON_INTERPRETER) src/models/train_model.py data/processed/train_processed.csv models/
+
+## Make Predictions
+predict: train
+	$(PYTHON_INTERPRETER) src/models/predict_model.py data/processed/test_processed.csv models/model.pkl reports/
 
 ## Delete all compiled Python files
 clean:

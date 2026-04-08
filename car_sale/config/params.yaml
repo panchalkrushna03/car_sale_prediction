@@ -1,0 +1,27 @@
+# Parameters for the car sale model
+
+# Data processing parameters
+data_processing:
+  drop_na: true
+  encoding: utf-8
+
+# Feature engineering parameters
+features:
+  categorical_features: ['Region', 'Model']
+  numerical_features: ['Year', 'Month', 'Avg_Price_EUR', 'BEV_Share', 'Premium_Share', 'GDP_Growth', 'Fuel_Price_Index']
+
+# Model training parameters
+train:
+  model_type: random_forest
+  test_size: 0.2
+  random_state: 42
+  hyperparameters:
+    n_estimators: 150
+    max_depth: 10
+    min_samples_split: 5
+    min_samples_leaf: 2
+    bootstrap: true
+
+# Evaluation parameters
+evaluate:
+  metrics: ['mae', 'mse', 'r2']

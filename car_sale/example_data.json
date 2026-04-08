@@ -1,0 +1,35 @@
+[
+  {
+    "Year": 2024,
+    "Month": 6,
+    "Region": "Europe",
+    "Model": "3 Series",
+    "Avg_Price_EUR": 45000,
+    "BEV_Share": 15.5,
+    "Premium_Share": 22.0,
+    "GDP_Growth": 1.8,
+    "Fuel_Price_Index": 1.15
+  },
+  {
+    "Year": 2024,
+    "Month": 6,
+    "Region": "China",
+    "Model": "X5",
+    "Avg_Price_EUR": 55000,
+    "BEV_Share": 25.0,
+    "Premium_Share": 18.5,
+    "GDP_Growth": 4.2,
+    "Fuel_Price_Index": 1.08
+  },
+  {
+    "Year": 2024,
+    "Month": 6,
+    "Region": "USA",
+    "Model": "5 Series",
+    "Avg_Price_EUR": 52000,
+    "BEV_Share": 8.2,
+    "Premium_Share": 25.0,
+    "GDP_Growth": 2.1,
+    "Fuel_Price_Index": 1.22
+  }
+]
